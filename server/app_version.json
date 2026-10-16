@@ -1,0 +1,13 @@
+{
+  "build": 15,
+  "version": "1.3.2",
+  "url_direct": "https://connectomes.duckdns.org/api/download/Connecto.apk",
+  "notes": "Connecto 1.3.2: Закрытие карточек магазина свайпом вниз на 120 FPS, новые живые анимированные рамки для аватаров (пасти, ушки, розы, луна, глаза и эффекты).",
+  "url_telegram": "",
+  "windows": {
+    "build": 15,
+    "version": "1.3.2",
+    "url": "https://connectomes.duckdns.org/api/download/Connecto-Setup.exe",
+    "notes": "Connecto 1.3.2: Закрытие карточек магазина свайпом вниз на 120 FPS, новые живые анимированные рамки для аватаров (пасти, ушки, розы, луна, глаза и эффекты)."
+  }
+}

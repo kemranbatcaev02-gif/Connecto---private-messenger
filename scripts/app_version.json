@@ -1,0 +1,13 @@
+{
+  "build": 13,
+  "version": "1.3.2",
+  "url_direct": "https://connectomes.duckdns.org/api/download/Connecto.apk",
+  "notes": "",
+  "url_telegram": "",
+  "windows": {
+    "build": 13,
+    "version": "1.3.2",
+    "url": "https://connectomes.duckdns.org/api/download/Connecto-Setup.exe",
+    "notes": ""
+  }
+}

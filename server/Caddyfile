@@ -1,0 +1,56 @@
+http://193.233.112.115, http://connectomes.duckdns.org {
+	redir https://connectomes.duckdns.org{uri} permanent
+}
+
+connectomes.duckdns.org {
+	encode zstd gzip
+
+	# SEO: robots.txt и sitemap.xml
+	handle /robots.txt {
+		root * /opt/connecto-web
+		file_server
+	}
+	handle /sitemap.xml {
+		root * /opt/connecto-web
+		file_server
+	}
+
+	# наш сервер: /api/... → 127.0.0.1:8000/... (и WebSocket /api/ws)
+	handle_path /api/* {
+		reverse_proxy 127.0.0.1:8000
+	}
+
+	# медиа-файлы и файлы чатов: /media/... → 127.0.0.1:8000/media/...
+	handle /media/* {
+		reverse_proxy 127.0.0.1:8000
+	}
+
+	# файлы скачивания (APK и Windows установщик): /download/... → 127.0.0.1:8000/download/...
+	handle /download/* {
+		reverse_proxy 127.0.0.1:8000
+	}
+
+	# сайт (Flutter web)
+	handle {
+		root * /opt/connecto-web
+
+		# HTML, сервис-воркер, главный скрипт и манифест — всегда свежие
+		@fresh path / /index.html /flutter_bootstrap.js /flutter_service_worker.js /main.dart.js /version.json /manifest.json
+		header @fresh Cache-Control "no-cache, no-store, must-revalidate"
+
+		# Движок WebAssembly/CanvasKit, шрифты и статика — кэшируются
+		@cacheable path /canvaskit/* /assets/* *.wasm *.png *.webp *.ttf *.woff2
+		header @cacheable Cache-Control "public, max-age=604800, stale-while-revalidate=86400"
+
+		try_files {path} /index.html
+		file_server
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(self), microphone=(self), display-capture=(self), geolocation=(self)"
+		X-Robots-Tag "all"
+	}
+}

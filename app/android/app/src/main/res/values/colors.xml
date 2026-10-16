@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- фон запуска = фон приложения (светлая тема), чтобы не было вспышки -->
+    <color name="splash_bg">#F5F6F9</color>
+    <color name="ic_launcher_bg_start">#7C6CFF</color>
+    <color name="ic_launcher_bg_end">#B7AEFF</color>
+</resources>

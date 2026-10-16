@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /download/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /ws
+
+Sitemap: https://connectomes.duckdns.org/sitemap.xml
+Host: https://connectomes.duckdns.org

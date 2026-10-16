@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "597081403460",
+    "project_id": "connecto-fdcea",
+    "storage_bucket": "connecto-fdcea.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597081403460:android:5c26152822b2b75555cc11",
+        "android_client_info": {
+          "package_name": "com.example.connecto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0cQKXJgxygtE8Ohg6HQbLbZk54PeG0dQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

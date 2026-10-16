@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <title>Connecto — Официальный сайт мессенджера | Скачать на Android и ПК</title>
+  <meta name="description" content="Connecto — современный быстрый мессенджер нового поколения: защищенные личные и групповые чаты, бесплатные звонки без ограничений, голосовые сообщения с расшифровкой, яркие истории (Stories) и магазин кастомизации профилей. Скачать Connecto для Android или открыть веб-версию.">
+  <meta name="keywords" content="Connecto, connecto мессенджер, скачать connecto, мессенджер connecto, connectomes, connectomes.duckdns.org, чаты онлайн, звонки, веб мессенджер, бесплатный мессенджер, connecto apk">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Connecto Team">
+  <link rel="canonical" href="https://connectomes.duckdns.org/">
+  <meta name="google-site-verification" content="30604efde62409b2">
+  <meta name="theme-color" content="#16131f">
+
+  <!-- Open Graph / VK / Telegram / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://connectomes.duckdns.org/">
+  <meta property="og:title" content="Connecto — Быстрый и безопасный мессенджер">
+  <meta property="og:description" content="Чаты, звонки, истории и уникальное оформление профилей. Общайтесь свободно в Connecto на телефоне, ПК и в веб-версии.">
+  <meta property="og:image" content="https://connectomes.duckdns.org/icons/Icon-512.png">
+  <meta property="og:site_name" content="Connecto">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Connecto — Быстрый и безопасный мессенджер">
+  <meta name="twitter:description" content="Чаты, звонки, истории и оформление профиля. Общайтесь свободно в Connecto.">
+  <meta name="twitter:image" content="https://connectomes.duckdns.org/icons/Icon-512.png">
+
+  <!-- iPhone: «На экран Домой» — открывается как приложение -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Connecto">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="preload" href="icons/Icon-192.png" as="image">
+  <link rel="preload" href="flutter_bootstrap.js" as="script">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Schema.org JSON-LD (Google & Yandex Rich Snippets) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Connecto",
+    "operatingSystem": "Android, Windows, Web",
+    "applicationCategory": "CommunicationApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "RUB"
+    },
+    "description": "Современный мессенджер: защищенные личные и групповые чаты, бесплатные звонки, голосовые сообщения, истории и магазин оформления профиля.",
+    "url": "https://connectomes.duckdns.org",
+    "downloadUrl": "https://connectomes.duckdns.org/download/Connecto.apk"
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #16131f;
+      overflow: hidden;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    #loader {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #b9b3d6;
+      background: #16131f;
+      z-index: 99999;
+      transition: opacity .3s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: opacity;
+    }
+    #loader img {
+      width: 88px; height: 88px; border-radius: 22px;
+      box-shadow: 0 12px 40px rgba(108, 92, 231, .45);
+      animation: logoPulse 2s ease-in-out infinite;
+      will-change: transform;
+    }
+    #loader .bar {
+      width: 140px; height: 4px; border-radius: 4px;
+      background: rgba(255,255,255,.08); overflow: hidden;
+      position: relative;
+    }
+    #loader .bar i {
+      display: block; width: 45%; height: 100%; border-radius: 4px;
+      background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+      animation: run 1.1s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+      will-change: transform;
+    }
+    @keyframes run {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(250%); }
+    }
+    @keyframes logoPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Semantic Crawlable Content for Search Engines (Yandex, Google, Bing) -->
+  <header class="sr-only">
+    <h1>Connecto — современный безопасный мессенджер</h1>
+    <p>Connecto — это быстрый мессенджер для общения с друзьями, коллегами и близкими без ограничений.</p>
+  </header>
+  <main class="sr-only">
+    <h2>Возможности Connecto:</h2>
+    <ul>
+      <li>Защищенные личные и групповые чаты с мгновенной доставкой сообщений</li>
+      <li>Бесплатные аудио и видеозвонки высокого качества</li>
+      <li>Голосовые сообщения с расшифровкой</li>
+      <li>Истории (Stories) с фото, видео и музыкой</li>
+      <li>Магазин уникального оформления профиля: анимированные обложки, живые фоны, рамки аватара и визуальные эффекты</li>
+      <li>Двухэтапная аутентификация и облачный пароль</li>
+    </ul>
+    <h2>Скачать приложение Connecto:</h2>
+    <p><a href="https://connectomes.duckdns.org/download/Connecto.apk">Скачать Connecto для Android (APK)</a></p>
+    <p><a href="https://connectomes.duckdns.org/download/Connecto-Setup.exe">Скачать Connecto для Windows</a></p>
+  </main>
+
+  <noscript>
+    <div style="padding: 24px; color: white; background: #16131f; font-family: sans-serif;">
+      <h2>Для работы веб-версии Connecto необходим JavaScript</h2>
+      <p>Пожалуйста, включите JavaScript в вашем браузере или скачайте официальное приложение:</p>
+      <p><a href="/download/Connecto.apk" style="color: #a29bfe; font-size: 18px;">Скачать Connecto APK для Android</a></p>
+    </div>
+  </noscript>
+
+  <div id="loader">
+    <img src="icons/Icon-192.png" alt="Connecto">
+    <div class="bar"><i></i></div>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var l = document.getElementById('loader');
+      if (!l) return;
+      l.style.opacity = '0';
+      setTimeout(function () { if (l && l.parentNode) l.parentNode.removeChild(l); }, 350);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

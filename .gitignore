@@ -1,0 +1,54 @@
+# Flutter / Dart
+app/.dart_tool/
+app/.flutter-plugins-dependencies
+app/.pub-cache/
+app/.pub/
+app/build/
+**/doc/api/
+app/app.*.symbols
+app/app.*.map.json
+app/android/app/debug
+app/android/app/profile
+app/android/app/release
+
+# Python / Server
+server/venv/
+server/__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+server/.env
+firebase.json
+*firebase*.json
+!firebase.json.example
+*.db
+*.sqlite
+*.sqlite3
+server/*.db
+server/smtp.json
+media/
+server/media/
+app/media/
+.pytest_cache/
+.mypy_cache/
+
+# Binaries & Distribution Artifacts
+dist/
+*.tar.gz
+*.tgz
+*.zip
+
+# IDE & Editor
+.idea/
+.vs/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# OS & Temporary
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.swp

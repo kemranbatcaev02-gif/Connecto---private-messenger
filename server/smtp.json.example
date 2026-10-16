@@ -1,0 +1,7 @@
+{
+  "host": "smtp.example.com",
+  "port": 465,
+  "user": "your_email@example.com",
+  "password": "your_app_password",
+  "from": "Connecto <your_email@example.com>"
+}
