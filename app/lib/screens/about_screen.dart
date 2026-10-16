@@ -94,6 +94,34 @@ class _AboutScreenState extends State<AboutScreen> {
             ),
           ),
           const SizedBox(height: 16),
+          const SectionLabel('Скачать Connecto'),
+          SectionCard(children: [
+            SettingsTile(
+              icon: AppIcons.download,
+              iconColor: appState.accent,
+              title: 'Android (APK)',
+              subtitle: 'Прямая ссылка на APK-файл для телефонов',
+              trailing: const Icon(AppIcons.open, size: 16),
+              onTap: () => launchLink('https://connectomes.duckdns.org/api/download/Connecto.apk'),
+            ),
+            SettingsTile(
+              icon: AppIcons.monitor,
+              iconColor: const Color(0xFF38BDF8),
+              title: 'Windows (.exe)',
+              subtitle: 'Установочный файл для компьютеров',
+              trailing: const Icon(AppIcons.open, size: 16),
+              onTap: () => launchLink('https://connectomes.duckdns.org/api/download/Connecto-Setup.exe'),
+            ),
+            SettingsTile(
+              icon: AppIcons.send,
+              iconColor: const Color(0xFF22D3EE),
+              title: 'Официальный Telegram',
+              subtitle: '@connecto_official · новости и релизы',
+              trailing: const Icon(AppIcons.open, size: 16),
+              onTap: () => launchLink('https://t.me/connecto_official'),
+            ),
+          ]),
+          const SizedBox(height: 16),
           SectionCard(children: [
             SettingsTile(
                 icon: AppIcons.refreshCw,

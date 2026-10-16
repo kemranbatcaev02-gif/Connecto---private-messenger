@@ -163,6 +163,12 @@ class SettingsScreen extends StatelessWidget {
                   const SizedBox(height: 18),
                   SectionCard(children: [
                     SettingsTile(
+                        icon: AppIcons.download,
+                        iconColor: appState.accent,
+                        title: 'Скачать приложение',
+                        subtitle: 'APK для Android и .exe для Windows',
+                        onTap: () => _push(context, const AboutScreen())),
+                    SettingsTile(
                         icon: AppIcons.circleHelp,
                         title: 'Помощь и поддержка',
                         onTap: () => _push(context, const HelpScreen())),
